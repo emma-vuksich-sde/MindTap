@@ -1,0 +1,57 @@
+public class Lease
+{
+    private String name;
+    private int aptNumber;
+    private int rent;
+    private int term;
+
+    public Lease()
+    {
+        name = "XXX";
+        aptNumber = 0;
+        rent = 1000;
+        term = 12;
+    }
+
+    public void setName(String n)
+    {
+        name = n;
+    }
+    public void setAptNumber(int a)
+    {
+        aptNumber = a;
+    }
+    public void setRent(int r)
+    {
+        rent = r;
+    }
+    public void setTerm(int t)
+    {
+        term = t;
+    }
+    public void addPetFee()
+    {
+        rent = rent + 10;
+        explainPetPolicy();
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public int getAptNumber()
+    {
+        return aptNumber;
+    }
+    public int getRent()
+    {
+        return rent;
+    }
+    public int getTerm()
+    {
+        return term;
+    }
+    public static void explainPetPolicy()
+    {
+        System.out.print("Pet fee is added to monthly rent.");
+    }
+}

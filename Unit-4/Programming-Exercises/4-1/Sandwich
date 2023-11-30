@@ -1,0 +1,38 @@
+public class Sandwich
+{
+    private String mainIngredient;
+    private String bread;
+    private double price;
+
+    public Sandwich()
+    {
+        mainIngredient = "XXX";
+        bread = "YYY";
+        price = 12.0;
+    }
+
+    public void setMainIngredient(String m)
+    {
+        mainIngredient = m;
+    }
+    public void setBread(String b)
+    {
+        bread = b;
+    }
+    public void setPrice(double p)
+    {
+        price = p;
+    }
+    public String getMainIngredient()
+    {
+        return mainIngredient;
+    }
+    public String getBread()
+    {
+        return bread;
+    }
+    public double getPrice()
+    {
+        return price;
+    }
+}

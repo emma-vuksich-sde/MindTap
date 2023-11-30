@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class DebugThree2
+{
+   public static void main(String[] args)
+   {
+      int a, b, c;
+      Scanner input = new Scanner(System.in);
+      System.out.println("Enter an integer >> ");
+      a = input.nextInt();
+      System.out.println("Enter a second integer >> ");
+      b = input.nextInt();
+      System.out.println("Enter a third integer >> ");
+      c = input.nextInt();
+      add(a, b);
+      add(b, c);
+      add(a, c);
+      subtract(a, b);
+      subtract(b, c);
+      subtract(a, c);  
+   }
+   public static void add(int x, int y)
+   {
+      System.out.println("The sum of " + x + " and " + y + " is " + (x + y));
+   }
+   public static void subtract(int x, int y)
+   {
+      System.out.println("The difference between " + x + " and " + y + " is " +  (x - y));
+   }
+}

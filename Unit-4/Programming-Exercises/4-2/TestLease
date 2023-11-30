@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class TestLease
+{
+    public static void main(String[] args)
+    {
+        Lease lease1 = getData();
+        Lease lease2 = getData();
+        Lease lease3 = getData();
+        Lease lease4 = new Lease(); 
+
+        showValues(lease1);
+        lease1.addPetFee();
+
+        showValues(lease1);
+        showValues(lease2);
+        showValues(lease3);
+        showValues(lease4);
+    }
+
+    public static Lease getData()
+    {
+        Scanner input = new Scanner(System.in);
+        Lease tempLease = new Lease();
+        System.out.println("Name: ");
+        tempLease.setName(input.nextLine());
+        System.out.println("Apartment #: ");
+        tempLease.setAptNumber(input.nextInt());
+        System.out.println("Rent: ");
+        tempLease.setRent(input.nextInt());
+        System.out.println("Term: ");
+        tempLease.setTerm(input.nextInt());
+
+        return tempLease;
+    }
+
+    public static void showValues(Lease lease)
+    {
+        String tempName = lease.getName();
+        int tempAptNumber = lease.getAptNumber();
+        int tempRent = lease.getRent();
+        int tempTerm = lease.getTerm();
+        System.out.println("Your lease reults:");
+        System.out.println("Name    :" + tempName);
+        System.out.println("Apartment    :" + tempAptNumber);
+        System.out.println("Rent    :" + tempRent);
+        System.out.println("Term    :" + tempTerm);
+    }
+}
